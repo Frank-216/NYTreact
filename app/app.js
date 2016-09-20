@@ -1,13 +1,14 @@
-// Include the Main React Dependencies
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './sass/base.scss';
 
-// Include the Main Component
-var Main = require('./Components/Main')
 
-// This code here allows us to render our main component (in this case "Main")
-ReactDOM.render(
+var Main = require("./components/Main.js");
 
-	<Main />,
-	document.getElementById('app')
-// )
+var exampleJSX = (
+	<div>
+	  <Main />
+  </div>
+);
+
+ReactDOM.render(exampleJSX, document.getElementById('app'));

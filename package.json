@@ -1,35 +1,31 @@
 {
-  "name": "hw19",
+  "name": "webpack-sass",
   "version": "1.0.0",
-  "description": "New York Times React Single Page Application",
-  "main": "index.js",
+  "description": "",
+  "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --w"
+    "build": "webpack",
+    "dev": "webpack -w & node server.js",
+    "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Frank-216/NYTreact.git"
-  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Frank-216/NYTreact/issues"
-  },
-  "homepage": "https://github.com/Frank-216/NYTreact#readme",
   "dependencies": {
-    "axios": "^0.12.0",
-    "babel": "^6.5.2",
+    "express": "^4.14.0",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1"
+  },
+  "devDependencies": {
     "babel-core": "^6.14.0",
     "babel-loader": "^6.2.5",
-    "body-parser": "^1.15.2",
-    "core-js": "^2.4.0",
-    "express": "^4.14.0",
-    "mongoose": "^4.5.1",
-    "morgan": "^1.7.0",
-    "react": "^15.3.1",
-    "react-dom": "^0.14.8",
-    "react-router": "^2.8.1",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react": "^6.11.1",
+    "css-loader": "^0.25.0",
+    "node-sass": "^3.10.0",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
     "webpack": "^1.13.2"
   }
 }
