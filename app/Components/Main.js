@@ -55,6 +55,13 @@ var Main = React.createClass({
 					<div className="jumbotron">
 						<h1 className="text-center">New York Times Article Scrubber </h1>
 						<h4 className="text-center"><em>Search, Save and Organize articles that are available on NYT</em></h4>
+						<hr/>
+						<p>
+							<a href="#/Search"><button className="btn btn-primary btn-lg">Search</button></a>
+							<a href="#/Saved"><button className="btn btn-danger btn-lg">Saved</button></a>
+
+						</p>
+
 					</div>
 
 					{/*<div className="col-md-6">
@@ -68,7 +75,7 @@ var Main = React.createClass({
 											<Results address={this.state.results} />
 					
 										</div>}*/}
-
+												{this.props.children}
 
 				</div>
 

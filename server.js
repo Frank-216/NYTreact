@@ -6,6 +6,7 @@ app.use(express.static(process.cwd() + "/public"));
 
 //Nagivate the simple page on HTML 
 app.get("*", function(req, res) {
+	console.log(0);
   res.sendFile(__dirname + "/public/index.html");
 });
 
