@@ -27594,42 +27594,81 @@
 /* 241 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	// Require React 
 	var React = __webpack_require__(1);
 
 	var Search = React.createClass({
-		displayName: "Search",
+		displayName: 'Search',
 
+
+		getInitialState: function getInitialState() {
+			return { value: '' };
+		},
 
 		render: function render() {
 
 			return React.createElement(
-				"div",
-				{ className: "container" },
+				'div',
+				{ className: 'container' },
 				React.createElement(
-					"div",
-					{ className: "col-lg-12" },
+					'div',
+					{ className: 'col-lg-12' },
 					React.createElement(
-						"div",
-						{ className: "panel panel-primary" },
+						'div',
+						{ className: 'panel panel-primary' },
 						React.createElement(
-							"div",
-							{ className: "panel-heading" },
+							'div',
+							{ className: 'panel-heading' },
 							React.createElement(
-								"h3",
-								{ className: "panel-title" },
-								"Search For Articles "
+								'h3',
+								{ className: 'panel-title' },
+								'Search For Articles '
 							)
 						),
 						React.createElement(
-							"div",
-							{ className: "panel-body" },
+							'div',
+							{ className: 'panel-body' },
 							React.createElement(
-								"h1",
+								'form',
 								null,
-								" Work"
+								React.createElement(
+									'div',
+									{ className: 'form-group' },
+									React.createElement(
+										'label',
+										{ 'for': 'search' },
+										'Search Term:'
+									),
+									React.createElement('input', { type: 'text', className: 'form-control', value: this.state.value })
+								),
+								React.createElement(
+									'div',
+									{ className: 'form-group' },
+									React.createElement(
+										'label',
+										{ 'for': 'startYear' },
+										'Start Year (Optional):'
+									),
+									React.createElement('input', { type: 'text', 'class': 'form-control' })
+								),
+								React.createElement(
+									'div',
+									{ className: 'form-group' },
+									React.createElement(
+										'label',
+										{ 'for': 'endYear' },
+										'End Year (Optional):'
+									),
+									React.createElement('input', { type: 'text', 'class': 'form-control' })
+								),
+								React.createElement(
+									'button',
+									{ type: 'submit', className: 'btn btn-default', id: 'runSearch' },
+									React.createElement('i', { className: 'fa fa-search' }),
+									' Search'
+								)
 							)
 						)
 					)
@@ -27674,15 +27713,7 @@
 								"Saved Articles "
 							)
 						),
-						React.createElement(
-							"div",
-							{ className: "panel-body" },
-							React.createElement(
-								"h1",
-								null,
-								" Work"
-							)
-						)
+						React.createElement("div", { className: "panel-body" })
 					)
 				)
 			);

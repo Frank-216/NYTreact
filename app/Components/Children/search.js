@@ -3,6 +3,10 @@ var React = require('react');
 
 var Search = React.createClass({
 
+	getInitialState:function(){
+		return{value:''}
+	},
+
 	render: function(){
 
 		return(
@@ -15,8 +19,28 @@ var Search = React.createClass({
 						</div>
 						<div className="panel-body">
 		
-						<h1> Work</h1>
+							<form >
+								<div className="form-group">
+								    <label for="search">Search Term:</label>
+								    <input type="text" className="form-control" value={this.state.value}/>
+								  </div>
+							
+								 {/*  Here we capture the Start Year Parameter  */}
 
+								  <div className="form-group">
+								    <label for="startYear">Start Year (Optional):</label>
+								    <input type="text" class="form-control"/>
+								  </div>
+
+							  	  {/*}Here we capture the End Year Parameter */}
+								  <div className="form-group">
+								    <label for="endYear">End Year (Optional):</label>
+								    <input type="text" class="form-control" />
+								  </div>
+
+								  {/*}Here we have our final submit button */}
+								  <button type="submit" className="btn btn-default" id="runSearch"><i className="fa fa-search"></i> Search</button>	  
+					</form>
 							{/*This code will allow us to automatically dump the correct GrandChild component
 							{this.props.children}*/}
 						</div>

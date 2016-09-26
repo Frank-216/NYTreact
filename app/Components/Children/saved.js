@@ -16,7 +16,7 @@ var Saved = React.createClass({
 						</div>
 						<div className="panel-body">
 		
-						<h1> Work</h1>
+						
 
 							{/*This code will allow us to automatically dump the correct GrandChild component
 							{this.props.children}*/}
