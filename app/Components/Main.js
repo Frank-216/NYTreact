@@ -19,29 +19,29 @@ var Main = React.createClass({
 	},
 
 	// If the 
-	componentDidUpdate: function(prevProps, prevState){
+	// componentDidUpdate: function(prevProps, prevState){
 
-		if(prevState.searchTerm != this.state.searchTerm){
-			console.log("UPDATED");
+	// 	if(prevState.searchTerm != this.state.searchTerm){
+	// 		console.log("UPDATED");
 
-			helpers.runQuery(this.state.searchTerm)
-				.then(function(data){
-					if (data != this.state.results)
-					{
-						console.log("HERE");
-						console.log(data);
+	// 		helpers.runQuery(this.state.searchTerm)
+	// 			.then(function(data){
+	// 				if (data != this.state.results)
+	// 				{
+	// 					console.log("HERE");
+	// 					console.log(data);
 
-						this.setState({
-							results: data
-						})		
-					}
+	// 					this.setState({
+	// 						results: data
+	// 					})		
+	// 				}
 
 
-				// This code is necessary to bind the keyword "this" when we say this.setState 
-				// to actually mean the component itself and not the runQuery function.
-				}.bind(this))		
-		}
-	},
+	// 			// This code is necessary to bind the keyword "this" when we say this.setState 
+	// 			// to actually mean the component itself and not the runQuery function.
+	// 			}.bind(this))		
+	// 	}
+	// },
 
 	// Here we render the function
 	render: function(){
@@ -59,26 +59,12 @@ var Main = React.createClass({
 						<p>
 							<a href="#/Search"><button className="btn btn-primary btn-lg">Search</button></a>
 							<a href="#/Saved"><button className="btn btn-danger btn-lg">Saved</button></a>
-
 						</p>
-
 					</div>
-
-					{/*<div className="col-md-6">
-										
-											<Form setTerm={this.setTerm}/>
-					
-										</div>
-					
-										<div className="col-md-6">
-									
-											<Results address={this.state.results} />
-					
-										</div>}*/}
-												{this.props.children}
-
 				</div>
-
+				<div className= 'row'>
+					{this.props.children}
+				</div>
 			</div>
 		)
 	}
